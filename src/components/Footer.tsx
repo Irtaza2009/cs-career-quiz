@@ -17,7 +17,7 @@ const Footer = () => {
         Made by <a href={"https://github.com/irtaza2009"}>Irtaza</a> for{" "}
         <a
           href={
-            "https://www.codedex.io/community/monthly-challenge/submission/"
+            "https://www.codedex.io/community/monthly-challenge/submission/3fxg183Q9fWsPuTB7cTp"
           }
         >
           {" "}
