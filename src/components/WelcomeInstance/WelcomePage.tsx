@@ -19,8 +19,8 @@ const WelcomePage = ({ onStartQuiz }: WelcomeTitleProps) => {
       <Row className={"text-center mt-3"}>
         <Col>
           <h3>
-            Overwhelmed by the immense amount of careers after in Computer
-            Scince? Ready to find out the one best suited for you?
+            Overwhelmed by the immense amount of careers in Computer
+            Science? Ready to find out the one best suited for you?
             <br /> Then let&#39;s get started!
           </h3>
         </Col>
