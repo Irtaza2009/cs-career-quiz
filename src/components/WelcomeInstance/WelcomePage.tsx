@@ -13,33 +13,19 @@ interface WelcomeTitleProps {
 const WelcomePage = ({ onStartQuiz }: WelcomeTitleProps) => {
   return (
     <div id={"welcome-page"} className={"pt-5 "}>
-      <Row className={"d-flex justify-content-between"}>
-        <h1 id={"main-title"}>What CS Career Matches Your Personality?</h1>
-      </Row>
-      <Row className={"text-center mt-3"}>
-        <Col>
-          <h3>
-            Overwhelmed by the immense amount of careers in Computer
-            Science? Ready to find out the one best suited for you?
-            <br /> Then let&#39;s get started!
-          </h3>
-        </Col>
-      </Row>
-      <Row
-        className={
-          "d-flex align-content-center justify-content-center mt-5 mb-5"
-        }
-      >
-        <Button
-          className={"text-uppercase border border-3 border-black"}
-          onClick={onStartQuiz}
-          id={"start-button"}
-          variant={"light"}
-          size={"lg"}
-        >
+      <h1 id={"main-title"} className={"mb-3"}>
+        What CS Career Matches Your Personality?
+      </h1>
+      <p className={"text-center mb-5"}>
+        Overwhelmed by the immense amount of careers in Computer Science? Ready
+        to find out the one best suited for you? <br /> Then let&#39;s get
+        started!
+      </p>
+      <div className={"text-center"}>
+        <button className={"backButton"} onClick={onStartQuiz}>
           Start!
-        </Button>
-      </Row>
+        </button>
+      </div>
     </div>
   );
 };

@@ -73,3 +73,22 @@ ul {
     text-align: center;
   }
 }
+.backButton {
+  border: 3px solid #000;
+  background-color: #ff6962; /* Peach color */
+  color: black; /* Text color */
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.backButton:hover {
+  background-color: #f85b53; /* Darker peach color on hover */
+}
+
+.backButton:active {
+  background-color: #ff4c43; /* Even darker peach color on click */
+}
