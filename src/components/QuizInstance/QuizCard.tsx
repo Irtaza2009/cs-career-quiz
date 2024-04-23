@@ -40,6 +40,18 @@ const QuizCard = ({
     }
   };
 
+  // Array of colors
+  const colors = ["#ff6962", "#19747e"];
+
+  // Function to change background color
+  const changeBackgroundColor = () => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+    document.getElementById("footer")!.style.backgroundColor = randomColor;
+    document.getElementById("text-container")!.style.backgroundColor =
+      randomColor;
+  };
+
   return (
     <>
       <Question questionNumber={questionNumber} questionText={questionText} />
@@ -49,6 +61,7 @@ const QuizCard = ({
             onClick={() => {
               onChoose("wd");
               playSound();
+              changeBackgroundColor();
             }}
             answerCode={"wd"}
             answerText={answers.wd}
@@ -59,6 +72,7 @@ const QuizCard = ({
             onClick={() => {
               onChoose("ai");
               playSound();
+              changeBackgroundColor();
             }}
             answerCode={"ai"}
             answerText={answers.ai}
@@ -69,6 +83,7 @@ const QuizCard = ({
             onClick={() => {
               onChoose("ds");
               playSound();
+              changeBackgroundColor();
             }}
             answerCode={"ds"}
             answerText={answers.ds}
@@ -79,6 +94,7 @@ const QuizCard = ({
             onClick={() => {
               onChoose("se");
               playSound();
+              changeBackgroundColor();
             }}
             answerCode={"se"}
             answerText={answers.se}
@@ -89,6 +105,7 @@ const QuizCard = ({
             onClick={() => {
               onChoose("csa");
               playSound();
+              changeBackgroundColor();
             }}
             answerCode={"csa"}
             answerText={answers.csa}
