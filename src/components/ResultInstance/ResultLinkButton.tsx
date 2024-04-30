@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { Button } from "react-bootstrap";
 
 interface ResultScreenProps {
   seScore: number;
@@ -23,69 +22,37 @@ const ResultLinkButton: React.FC<ResultScreenProps> = ({
   if (seScore > Math.max(wdScore, aiScore, dsScore, csaScore)) {
     return (
       <Link href={"/se"}>
-        <Button
-          className={"border border-3 border-black"}
-          variant={"light"}
-          size={"lg"}
-        >
-          Results
-        </Button>
+        <button className={"backButton"}>Result</button>
       </Link>
     );
   } else if (wdScore > Math.max(aiScore, dsScore, seScore, csaScore)) {
     return (
       <Link href={"/wd"}>
-        <Button
-          className={"border border-3 border-black"}
-          variant={"light"}
-          size={"lg"}
-        >
-          Results
-        </Button>
+        <button className={"backButton"}>Result</button>
       </Link>
     );
   } else if (aiScore > Math.max(dsScore, wdScore, seScore, csaScore)) {
     return (
       <Link href={"/ai"}>
-        <Button
-          className={"border border-3 border-black"}
-          variant={"light"}
-          size={"lg"}
-        >
-          Results
-        </Button>
+        <button className={"backButton"}>Result</button>
       </Link>
     );
   } else if (dsScore > Math.max(wdScore, aiScore, seScore, csaScore)) {
     return (
       <Link href={"/ds"}>
-        <Button
-          className={"border border-3 border-black"}
-          variant={"light"}
-          size={"lg"}
-        >
-          Results
-        </Button>
+        <button className={"backButton"}>Result</button>
       </Link>
     );
   } else if (csaScore > Math.max(wdScore, aiScore, seScore, dsScore)) {
     return (
       <Link href={"/csa"}>
-        <Button
-          className={"border border-3 border-black"}
-          variant={"light"}
-          size={"lg"}
-        >
-          Results
-        </Button>
+        <button className={"backButton"}>Result</button>
       </Link>
     );
   } else {
     return (
       <Link href={"/jack"}>
-        <Button variant={"light"} size={"lg"}>
-          Results
-        </Button>
+        <button className={"backButton"}>Result</button>
       </Link>
     );
   }

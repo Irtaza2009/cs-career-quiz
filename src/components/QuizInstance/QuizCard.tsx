@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Question from "@/components/QuizInstance/Question";
 import Answer from "@/components/QuizInstance/Answer";
 import { Col, Row } from "react-bootstrap";
@@ -16,40 +16,40 @@ interface QuizCardProps {
   onChoose: (answerCode: "wd" | "ai" | "ds" | "se" | "csa") => void;
 }
 
-/**
- * Renders the whole question card along with the question itself and the answer buttons
- * @param answers contains the answers to display
- * @param questionNumber contains the number of the question
- * @param questionText contains the question text/prompt
- * @param onChoose contains the function to call when an answer is chosen
- */
 const QuizCard = ({
   answers,
   questionNumber,
   questionText,
   onChoose,
 }: QuizCardProps) => {
-  // Create a ref to the audio element
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
-  // Function to play the audio when the button is clicked
   const playSound = () => {
-    // Check if the audio element exists and is loaded
     if (audioRef.current && audioRef.current.readyState === 4) {
       audioRef.current.play();
     }
   };
 
-  // Array of colors
-  const colors = ["#ff6962", "#19747e"];
+  const colors = [
+    "#ff6962",
+    "#19747e",
+    "#7e3f2e",
+    "#876e87",
+    "#195c9f",
+    "#581243",
+  ]; // Additional colors added
 
-  // Function to change background color
   const changeBackgroundColor = () => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.backgroundColor = randomColor;
-    document.getElementById("footer")!.style.backgroundColor = randomColor;
-    document.getElementById("text-container")!.style.backgroundColor =
-      randomColor;
+    // Toggle between the two colors for the top and bottom of the gradient
+    const topColorIndex = (currentColorIndex + 1) % colors.length;
+    const bottomColorIndex = (currentColorIndex + 2) % colors.length;
+
+    // Set the background gradient using the current and next colors
+    document.body.style.background = `linear-gradient(to bottom right, ${colors[topColorIndex]}, ${colors[bottomColorIndex]})`;
+
+    // Update the current color index
+    setCurrentColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
   };
 
   return (
@@ -112,7 +112,6 @@ const QuizCard = ({
           />
         </Col>
       </Row>
-      {/* Audio element */}
       <audio ref={audioRef}>
         <source src="/sounds/start.mp3" type="audio/mpeg" />
       </audio>

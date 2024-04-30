@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  background-color: #19747e;
+  background-image: linear-gradient(to bottom right, #19747e, #ff6962);
 }
 
 a {
@@ -30,7 +30,7 @@ ul {
   }
 }
 #text-container {
-  background-color: #19747e;
+  background: transparent;
 }
 
 #start-button {
@@ -38,21 +38,21 @@ ul {
 }
 
 .answer {
-  background-color: #0fa4af;
+  background-color: rgba(15, 164, 175, 0.3);
   width: 250px;
   height: 250px;
 }
 
 .answer:hover {
-  background-color: rgb(88, 214, 220);
+  background-color: rgba(88, 214, 220, 0.3);
 }
 
 .answer:active {
-  background-color: #4fc5d2 !important;
+  background-color: rgba(79, 197, 210, 0.3) !important;
 }
 
 #footer {
-  background-color: #19747e;
+  background: transparent;
   width: 600px;
   color: #a9d6e5;
 }

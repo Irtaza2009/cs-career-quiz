@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Button, Col, Row } from "react-bootstrap";
 
 interface WelcomeTitleProps {
   onStartQuiz: () => void;
