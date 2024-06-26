@@ -16,9 +16,9 @@ const WelcomePage = ({ onStartQuiz }: WelcomeTitleProps) => {
         What CS Career Matches Your Personality?
       </h1>
       <p className={"text-center mb-5"}>
-        Overwhelmed by the immense amount of careers in Computer Science? Ready
-        to find out the one best suited for you? <br /> Then let&#39;s get
-        started!
+        Are you overwhelmed by the immense amount of careers in Computer
+        Science? Ready to find out the one best suited for you? <br /> Then
+        let&#39;s get started!
       </p>
       <div className={"text-center"}>
         <button className={"backButton"} onClick={onStartQuiz}>
